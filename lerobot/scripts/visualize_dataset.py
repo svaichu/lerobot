@@ -140,7 +140,9 @@ def visualize_dataset(
     gc.collect()
 
     if mode == "distant":
-        rr.serve(open_browser=False, web_port=web_port, ws_port=ws_port)
+        rr.serve_web_viewer(open_browser=False, web_port=web_port)
+        # import rerun
+        # rerun.sta
 
     logging.info("Logging to Rerun")
 

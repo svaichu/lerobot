@@ -140,7 +140,8 @@ def visualize_dataset(
     gc.collect()
 
     if mode == "distant":
-        rr.serve_web_viewer(open_browser=False, web_port=web_port)
+        # rr.serve_web_viewer(open_browser=False, web_port=web_port)
+        rr.serve_grpc(grpc_port=ws_port, server_memory_limit="50%")
         # import rerun
         # rerun.sta
 
